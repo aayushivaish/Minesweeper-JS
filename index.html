@@ -4,21 +4,31 @@
   <meta charset="UTF-8">
   <title>Minesweeper</title>
   <link rel="stylesheet" href="style.css"></link>
-  <script src="app.js" charset="utf-8"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a31bdd6d95.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="color">
 
 <center>
   <div class="container">
-    <div class="grid"></div>
-    <div>Flags left: <span id='flags-left'></span></div>
+    <div id="grid" class="grid"></div>
+    <div id="flag" >Flags left: <span id='flags-left'></span></div>
     <div id="result"></div>
     <div>
       <button id="replay-button" type="button" onClick="refreshPage()">Play Again !!</button>
     </div>
+    <div class="pos">
+      <label for="checkbox" class="label" >
+        <i  onclick="light()" class="fa fa-sun"></i>
+        <i  onclick="dark()" class="fa fa-moon"></i>
+        <div id="circle" class="circle"></div>
+      </label>
+    </div>
+    
   </div>
   </center>
+
+  <script src="app.js" charset="utf-8"></script>
 
 </body>
 </html>

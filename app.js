@@ -203,3 +203,30 @@ document.addEventListener('DOMContentLoaded', () => {
 function refreshPage(){
   window.location.reload();
   }
+
+  // dark mode
+
+ const bd = document.getElementById('color');
+ const ball = document.getElementById("circle");
+ const grid = document.getElementById("grid");
+ const flag = document.getElementById("flag");
+ const result = document.getElementById("result");
+ const replay = document.getElementById("replay-button");
+
+function light(){
+  bd.style.backgroundColor ="rgb(233, 233, 225)";
+  ball.style.transform="translateX(0px)";
+  grid.classList.toggle("dark");
+  flag.classList.toggle("dark");
+  result.classList.toggle("dark");
+  replay.classList.toggle("dark");
+
+}
+function dark(){
+  bd.style.backgroundColor ="black";
+  ball.style.transform="translateX(25px)";
+  grid.classList.toggle("dark");
+  flag.classList.toggle("dark");
+  result.classList.toggle("dark");
+  replay.classList.toggle("dark");
+}
