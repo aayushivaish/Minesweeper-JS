@@ -92,6 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (total == 2) square.classList.add('two')
         if (total == 3) square.classList.add('three')
         if (total == 4) square.classList.add('four')
+        if (total == 5) square.classList.add('five')
+        if (total == 6) square.classList.add('six')
         square.innerHTML = total
         return
       }
