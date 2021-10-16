@@ -72,3 +72,16 @@
     margin-top: 5px;
     color: #e76346;
   }
+
+  #replay-button
+  {
+    color: #000000;
+    font-size:medium;
+    height: 35px;
+    transition-duration: 0.4s;
+    display: none;
+  }
+  #replay-button:hover {
+    background-color: #bab7a9;
+    color: white;
+  }
