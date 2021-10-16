@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
   const flagsLeft = document.querySelector('#flags-left')
   const result = document.querySelector('#result')
+  const replay = document.querySelector('#replay-button')
+
   let width = 10
   let bombAmount = 20
   let flags = 0
@@ -164,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function gameOver(square) {
     result.innerHTML = 'BOOM! Game Over!'
     isGameOver = true
+    replay.style.display = "inline";  // to show button when game is over
 
     //show ALL the bombs
     squares.forEach(square => {
@@ -187,7 +190,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (matches === bombAmount) {
         result.innerHTML = 'YOU WIN!'
         isGameOver = true
+        replay.style.display = "inline";  // to show button when game is over
       }
     }
   }
+
+  
+
 })
+
+// to refresh page when Play Again is clicked
+function refreshPage(){
+  window.location.reload();
+  }
